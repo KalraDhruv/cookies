@@ -75,12 +75,20 @@
                     
                     <?php
 			if (isset($_COOKIE['theme'])){
-			    echo "<p>Theme:".$_COOKIE["theme"]."</p>";
+			    if($_COOKIE['theme'] ==0){
+			       echo "<p> Please select Theme Value </p>"; 
+			    }else{
+				echo "<p>Theme: ".$_COOKIE["theme"]."</p>";
+			    }
 			}else{
 			    echo "<p>No Theme Cookie is present</p>";
 			}
 			if (isset($_COOKIE['philosopher'])){
-			    echo "<p>Philosopher:".$_COOKIE["philosopher"]."</p>";
+   				if ($_COOKIE['philosopher'] ==0){
+				    echo "<p> Please select Philosopher Value </p>";
+				}else{
+				    echo "<p>Philosopher: ".$_COOKIE["philosopher"]."</p>";
+				}
 			}else{
 			    echo "<p>No Philosopher Cookie is present</p>";
 			}
