@@ -74,8 +74,16 @@
                 <div class="mdl-card__supporting-text">
                     
                     <?php
-
-                   
+			if (isset($_COOKIE['theme'])){
+			    echo "<p>Theme:".$_COOKIE["theme"]."</p>";
+			}else{
+			    echo "<p>No Theme Cookie is present</p>";
+			}
+			if (isset($_COOKIE['philosopher'])){
+			    echo "<p>Philosopher:".$_COOKIE["philosopher"]."</p>";
+			}else{
+			    echo "<p>No Philosopher Cookie is present</p>";
+			}
                    
                     ?>                     
                     
